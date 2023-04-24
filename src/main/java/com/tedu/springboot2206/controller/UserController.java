@@ -29,6 +29,18 @@ public class UserController {
         String username=request.getParameter("username");
         System.out.println("要删除的用户是："+username);
 
+        File file = new File(userDir,username+".obj");
+        file.delete();
+        //回个页面
+        //http://localhost:8080/userList
+
+        try {
+            response.sendRedirect("/userList");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     @RequestMapping("/userList")
