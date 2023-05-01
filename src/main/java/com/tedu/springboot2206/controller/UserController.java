@@ -116,7 +116,7 @@ public class UserController {
             pw.println("</tr>");
         }
 
-            pw.println("<table>");
+            pw.println("</table>");
             pw.println("</center>");
             pw.println("</body>");
             pw.println("</html>");
